@@ -4,11 +4,11 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'conn',
   connector: 'postgresql',
-  url: 'postgresql://postgres:yoylHdDGFOB1zv46mecL@container',
-  host: 'containers-us-west-58.railway.app',
-  port: 6851,
+  url: '',
+  host: 'containers-us-west-140.railway.app',
+  port: 7258,
   user: 'postgres',
-  password: 'yoylHdDGFOB1zv46mecL',
+  password: '1T7FzaUdnAALwPFox4Rh',
   database: 'railway'
 };
 

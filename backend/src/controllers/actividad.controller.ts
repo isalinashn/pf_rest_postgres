@@ -26,7 +26,7 @@ export class ActividadController {
     public actividadRepository : ActividadRepository,
   ) {}
 
-  @post('/actividads')
+  @post('/actividades')
   @response(200, {
     description: 'Actividad model instance',
     content: {'application/json': {schema: getModelSchemaRef(Actividad)}},
@@ -47,7 +47,7 @@ export class ActividadController {
     return this.actividadRepository.create(actividad);
   }
 
-  @get('/actividads/count')
+  @get('/actividades/count')
   @response(200, {
     description: 'Actividad model count',
     content: {'application/json': {schema: CountSchema}},
@@ -58,7 +58,7 @@ export class ActividadController {
     return this.actividadRepository.count(where);
   }
 
-  @get('/actividads')
+  @get('/actividades')
   @response(200, {
     description: 'Array of Actividad model instances',
     content: {
@@ -76,7 +76,7 @@ export class ActividadController {
     return this.actividadRepository.find(filter);
   }
 
-  @patch('/actividads')
+  @patch('/actividades')
   @response(200, {
     description: 'Actividad PATCH success count',
     content: {'application/json': {schema: CountSchema}},
@@ -95,7 +95,7 @@ export class ActividadController {
     return this.actividadRepository.updateAll(actividad, where);
   }
 
-  @get('/actividads/{id}')
+  @get('/actividades/{id}')
   @response(200, {
     description: 'Actividad model instance',
     content: {
@@ -111,7 +111,7 @@ export class ActividadController {
     return this.actividadRepository.findById(id, filter);
   }
 
-  @patch('/actividads/{id}')
+  @patch('/actividades/{id}')
   @response(204, {
     description: 'Actividad PATCH success',
   })
@@ -129,7 +129,7 @@ export class ActividadController {
     await this.actividadRepository.updateById(id, actividad);
   }
 
-  @put('/actividads/{id}')
+  @put('/actividades/{id}')
   @response(204, {
     description: 'Actividad PUT success',
   })
@@ -140,7 +140,7 @@ export class ActividadController {
     await this.actividadRepository.replaceById(id, actividad);
   }
 
-  @del('/actividads/{id}')
+  @del('/actividades/{id}')
   @response(204, {
     description: 'Actividad DELETE success',
   })
